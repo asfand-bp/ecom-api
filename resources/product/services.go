@@ -7,14 +7,12 @@ import (
 )
 
 type Service struct {
-	DB     *gorm.DB
-	Access *Service
+	DB *gorm.DB
 }
 
 func NewService() *Service {
 	return &Service{
-		DB:     db.DB,
-		Access: NewService(),
+		DB: db.DB,
 	}
 }
 
